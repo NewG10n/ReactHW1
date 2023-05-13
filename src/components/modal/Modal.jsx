@@ -1,12 +1,11 @@
 import React from "react";
 
-const Modal = ({ content }) => {
+const Modal = ({ header, text, closeButton }) => {
   return (
     <div className="modal">
-      <div className="modal-content">
-        <h1>{content.header}</h1>
-        <p>{content.text}</p>
-      </div>
+      <h1>{header}</h1>
+      <p>{text}</p>
+      <button>{closeButton ? "X" : null}</button>
     </div>
   );
 };

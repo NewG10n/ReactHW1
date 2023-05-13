@@ -6,16 +6,15 @@ import Modal from "./components/modal";
 
 import "./App.css";
 
-const [useState, useEffect] = React;
-
 function App() {
   return (
     <div className="App">
       <Container>
-        <Button />
-        <Button />
+        <Button text={"Open first modal"} />
+        <Modal header={"First modal"} />
 
-        <Modal />
+        <Button text={"Open second modal"} />
+        <Modal header={"Second modal"} />
       </Container>
     </div>
   );
