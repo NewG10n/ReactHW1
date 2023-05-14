@@ -6,15 +6,29 @@ import Modal from "./components/modal";
 
 import "./App.css";
 
+const { useState } = React;
+
 function App() {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState('')
+
   return (
     <div className="App">
       <Container>
-        <Button text={"Open first modal"} />
-        <Modal header={"First modal"} />
+        <Button
+          color={"red"}
+          text={"Open first modal"}
+          modal={isModalOpen}
+          toggleModal={setModalOpen}
+        />
+        <Button
+          color={"blue"}
+          text={"Open second modal"}
+          modal={isModalOpen}
+          toggleModal={setModalOpen}
+        />
 
-        <Button text={"Open second modal"} />
-        <Modal header={"Second modal"} />
+        <Modal isOpen={isModalOpen} />
       </Container>
     </div>
   );
