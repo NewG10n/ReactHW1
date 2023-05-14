@@ -1,10 +1,8 @@
 import React from "react";
 
 const Button = ({ color, text, modal, toggleModal }) => {
-  const handleButtonClick = () => toggleModal(!modal);
-
   return (
-    <button style={{ background: color }} onClick={handleButtonClick}>
+    <button style={{ backgroundColor: color }} onClick={() => toggleModal(!modal)}>
       {text}
     </button>
   );
