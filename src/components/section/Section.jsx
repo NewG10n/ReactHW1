@@ -23,16 +23,16 @@ const Section = ({ color, closeModalBtn }) => {
   return (
     <section className={classes.section}>
       <Button
-        color={color}
-        text={"Get a " + color + " pill"}
         modal={isModalOpen}
         toggleModal={setModalOpen}
+        color={color}
+        text={"Get a " + color + " pill"}
       />
       <Modal
-        color={color}
         isOpen={isModalOpen}
         toggleModal={setModalOpen}
-        header={color + " pill"}
+        color={color}
+        header={"You choose a " + color + " pill"}
         text={"Do you want to get a " + color + " pill?"}
         closeButton={closeModalBtn}
       />
