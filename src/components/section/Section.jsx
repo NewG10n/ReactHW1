@@ -29,7 +29,7 @@ const Section = ({ color, closeModalBtn }) => {
         toggleModal={setModalOpen}
       />
       <Modal
-          color={color}
+        color={color}
         isOpen={isModalOpen}
         toggleModal={setModalOpen}
         header={color + " pill"}
